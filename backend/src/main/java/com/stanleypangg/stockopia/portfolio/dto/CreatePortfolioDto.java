@@ -1,4 +1,4 @@
-package com.stanleypangg.stockopia.dto;
+package com.stanleypangg.stockopia.portfolio.dto;
 
 import java.math.BigDecimal;
 

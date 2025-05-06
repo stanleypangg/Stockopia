@@ -1,6 +1,6 @@
 package com.stanleypangg.stockopia.portfolio;
 
-import com.stanleypangg.stockopia.dto.CreatePortfolioDto;
+import com.stanleypangg.stockopia.portfolio.dto.CreatePortfolioDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
