@@ -1,7 +1,7 @@
 package com.stanleypangg.stockopia.portfolio;
 
-import com.stanleypangg.stockopia.position.model.Position;
-import com.stanleypangg.stockopia.trade.model.Trade;
+import com.stanleypangg.stockopia.position.Position;
+import com.stanleypangg.stockopia.trade.Trade;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
