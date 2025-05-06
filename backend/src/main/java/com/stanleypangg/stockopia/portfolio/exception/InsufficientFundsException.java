@@ -1,4 +1,4 @@
-package com.stanleypangg.stockopia.global.exception;
+package com.stanleypangg.stockopia.portfolio.exception;
 
 public class InsufficientFundsException extends RuntimeException {
     public InsufficientFundsException() {
