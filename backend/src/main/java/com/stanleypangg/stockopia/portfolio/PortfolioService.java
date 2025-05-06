@@ -1,7 +1,7 @@
-package com.stanleypangg.stockopia.portfolio.service;
+package com.stanleypangg.stockopia.portfolio;
 
-import com.stanleypangg.stockopia.portfolio.model.Portfolio;
-import com.stanleypangg.stockopia.portfolio.repository.PortfolioRepository;
+import com.stanleypangg.stockopia.portfolio.Portfolio;
+import com.stanleypangg.stockopia.portfolio.PortfolioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

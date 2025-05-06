@@ -1,4 +1,4 @@
-package com.stanleypangg.stockopia.stock.service;
+package com.stanleypangg.stockopia.stock;
 
 import com.stanleypangg.stockopia.stock.dto.QuoteDto;
 import com.stanleypangg.stockopia.stock.exception.ExternalApiException;

@@ -1,4 +1,4 @@
-package com.stanleypangg.stockopia.portfolio.model;
+package com.stanleypangg.stockopia.portfolio;
 
 import com.stanleypangg.stockopia.position.model.Position;
 import com.stanleypangg.stockopia.trade.model.Trade;

@@ -1,16 +1,16 @@
-package com.stanleypangg.stockopia.trade.model;
+package com.stanleypangg.stockopia.position;
 
-import com.stanleypangg.stockopia.portfolio.model.Portfolio;
+import com.stanleypangg.stockopia.portfolio.Portfolio;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 
 @Entity
-public class Trade {
+public class Position {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,9 +20,7 @@ public class Trade {
     @NotNull
     private Integer quantity;
     @Positive
-    @NotNull
-    private BigDecimal price;
-    private Instant timestamp;
+    private BigDecimal averagePrice;
     @ManyToOne
     @JoinColumn(name = "portfolio_id")
     private Portfolio portfolio;

@@ -1,6 +1,5 @@
-package com.stanleypangg.stockopia.stock.controller;
+package com.stanleypangg.stockopia.stock;
 
-import com.stanleypangg.stockopia.stock.service.StockService;
 import com.stanleypangg.stockopia.stock.dto.QuoteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
