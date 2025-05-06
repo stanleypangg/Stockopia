@@ -1,4 +1,4 @@
-package com.stanleypangg.stockopia.stock;
+package com.stanleypangg.stockopia.stock.service;
 
 import com.stanleypangg.stockopia.stock.dto.QuoteDto;
 import com.stanleypangg.stockopia.stock.exception.ExternalApiException;
@@ -30,6 +30,7 @@ public class StockService {
     }
 
     public QuoteDto getQuote(String symbol) {
+        // construct uri
         String uri = UriComponentsBuilder
                 .fromUriString(apiUrl)
                 .queryParam("function", "GLOBAL_QUOTE")
@@ -39,17 +40,20 @@ public class StockService {
 
         Map<?, ?> response;
         try {
+            // convert JSON to generic Map
             response = restTemplate.getForObject(uri, Map.class);
         } catch (Exception e) {
             System.err.println("Error calling stock API for " + symbol + ": " + e);
             throw new ExternalApiException("Failed to fetch quote for " + symbol, e);
         }
 
+        // extract global quote object
         Map<?, ?> global = (Map<?, ?>) response.get("Global Quote");
         if (global == null || !global.containsKey("05. price")) {
             throw new QuoteNotFoundException(symbol);
         }
 
+        // parse and return price
         String price = (String) global.get("05. price");
         return new QuoteDto(symbol, new BigDecimal(price));
     }

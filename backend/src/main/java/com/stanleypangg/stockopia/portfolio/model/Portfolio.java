@@ -1,12 +1,12 @@
-package com.stanleypangg.stockopia.portfolio;
+package com.stanleypangg.stockopia.portfolio.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.stanleypangg.stockopia.position.model.Position;
+import com.stanleypangg.stockopia.trade.model.Trade;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 public class Portfolio {
@@ -17,6 +17,10 @@ public class Portfolio {
     private String name;
     @NotNull
     private BigDecimal balance = BigDecimal.ZERO;
+    @OneToMany
+    private List<Trade> trades;
+    @OneToMany
+    private List<Position> positions;
 
     public Portfolio() {}
     public Portfolio(String name) {

@@ -1,8 +1,8 @@
 package com.stanleypangg.stockopia;
 
-import com.stanleypangg.stockopia.portfolio.Portfolio;
-import com.stanleypangg.stockopia.portfolio.PortfolioRepository;
-import com.stanleypangg.stockopia.portfolio.PortfolioService;
+import com.stanleypangg.stockopia.portfolio.model.Portfolio;
+import com.stanleypangg.stockopia.portfolio.repository.PortfolioRepository;
+import com.stanleypangg.stockopia.portfolio.service.PortfolioService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
